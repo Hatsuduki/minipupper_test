@@ -32,14 +32,14 @@ def move():
         
             yaw = yaw + yaw_increment
             print(yaw)
-            cy=math.cos(yaw*0.5)
-            sy=math.sin(yaw*0.5)
-            cp=math.cos(pitch*0.5)
-            sp=math.sin(pitch*0.5)
-            cr =math.cos(roll * 0.5)
-            sr =math.sin(roll * 0.5)
+            cy = math.cos(yaw*0.5)
+            sy = math.sin(yaw*0.5)
+            cp = math.cos(pitch*0.5)
+            sp = math.sin(pitch*0.5)
+            cr = math.cos(roll * 0.5)
+            sr = math.sin(roll * 0.5)
 
-            pose.orientation.w= cy * cp * cr + sy * sp * sr
+            pose.orientation.w = cy * cp * cr + sy * sp * sr
             pose.orientation.x = cy * cp * sr - sy * sp * cr
             pose.orientation.y = sy * cp * sr + cy * sp * cr
             pose.orientation.z = sy * cp * cr - cy * sp * sr
