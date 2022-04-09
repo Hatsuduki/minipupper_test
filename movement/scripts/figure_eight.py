@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+#credits to: https://github.com/mangdangroboticsclub/minipupper_ros/blob/master/mini_pupper_detect/scripts/oak_detect.py
 import rospy
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import Pose
@@ -16,7 +16,7 @@ def move():
     rospy.init_node("pose", anonymous=True)
     pub_pose = rospy.Publisher("/body_pose", Pose, queue_size=10) 
 
-    global pose,roll,pitch,yaw,pitch_increment
+    global pose,roll,pitch,yaw,pitch_increment,yaw_increment
     count = 0
     rate = rospy.Rate(3)
     pitch_increment = 0.1*(3/6)
