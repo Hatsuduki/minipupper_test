@@ -19,8 +19,9 @@ def move():
 
     global pose,roll,pitch,yaw,pitch_increment
     count = 0
-    rate = rospy.Rate(5) # 5hz
+    rate = rospy.Rate(3)
     rate.sleep()
+    rate = rospy.Rate(10) # 10hz
 
     for i in range(4):
         if count == 0 or count == 3:
@@ -32,10 +33,10 @@ def move():
         
             pitch = pitch+pitch_increment
             print(pitch)
-            cy = math.cos(yaw*0.5)
-            sy = math.sin(yaw*0.5)
-            cp = math.cos(pitch*0.5)
-            sp = math.sin(pitch*0.5)
+            cy = math.cos(yaw * 0.5)
+            sy = math.sin(yaw * 0.5)
+            cp = math.cos(pitch * 0.5)
+            sp = math.sin(pitch * 0.5)
             cr = math.cos(roll * 0.5)
             sr = math.sin(roll * 0.5)
 
